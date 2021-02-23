@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Roboto" ,sans-serif
+}
+
+a {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: white; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+li {
+    list-style: none;
+}
+h1,h2,h3 {
+    color: #1B1818;
+    font-weight: lighter;
+}
+h4 {
+    color: #23AEFD;
+}
+h3,h4 {
+    font-size: 1.7rem;
+}
+h1, .fas {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+p {
+    font-size: 17px;
+ }
+.fas {
+    color: #1aa8c6;
+}
+
+
+/***** Header ****/
+header {
+    background-color: #423B3B;
+    padding: 10px;
+}
+.header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    max-width: 150px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+
+    transition: all 0.3s ease;
+}
+.nav-list li {
+    padding: 0 15px;
+}
+.nav-list a::after {
+    content: " ";
+    display: block;
+    background-color: #d82027;
+    width: 0%;
+    height: 2px;
+    transition: all 0.3s ease;
+}
+.nav-list a:hover {
+    color: #d82027;
+}
+.nav-list li:hover a::after {
+    width: 115%;
+    
+}
+.burger-menu{display: none;} /*Buger Menu */
+
+
+/***** MAIN ****/
+/*Pocetna*/
+.pocetna .container {
+    text-align: center;
+}
+
+.container .image-holder {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container .text-holder {
+    display: inline-block;
+    margin-top: 44px;
+    margin-bottom: 30px;
+}
+#cena {margin: 35px 0px; }
+#cena span {font-weight: 700;}
+
+#btnS {
+    background-color: #23AEFD;
+    width: 80%;
+    margin: 30px auto;
+    transition: 0.4s ease ;
+    cursor: pointer;
+}
+#btnS:hover {
+    background-color: tomato;
+}
+#btnS a {
+    font-size: 2rem;
+    color: white;
+    padding: 5px 0px;
+
+
+}
+
+/*Naocare*/
+.naocare .container {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+    gap: 20px 10px;
+}
+.desc p {
+    line-height: 1.6;
+    max-width: 80%;
+    margin: 15px auto;
+}
+.desc h3 {
+    font-weight: 800;
+}
+
+.desc {
+    transition: all 0.4s ease;
+}
+.desc:hover {
+    background-color: tomato;
+}
+
+/**** Helper Class ******/
+img {
+    width: 100%;
+
+}
+
+.container {
+   margin: 44px 15px;
+}
+
+.flex {
+    display: flex;
+}
+
+/*FOR ALL MEDIA */
+@media screen and (max-width: 1200px) {
+    h3,h4 {
+    font-size: 1.4rem !important;
+    }
+    h1, .fas {
+    font-size: 2.7rem !important;
+    }
+    h2 {
+        font-size: 1.7rem !important;
+    }
+
+    .container .image-holder {
+        width: 100%;
+    }
+    #btnS a {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media screen and (max-width: 641px) {
+    h3,h4 {
+    font-size: 1.3rem !important;
+    }
+    h1, .fas {
+    font-size: 2.6rem !important;
+    }
+    h2 {
+        font-size: 1.6rem !important;
+    }
+    #btnS a {font-size: 1.5rem;}
+
+}
+
+@media screen and (max-width: 300px) {
+    h3,h4 {
+    font-size: 1rem !important;
+    }
+    h1, .fas {
+    font-size: 1.6rem !important;
+    }
+    h2 {
+        font-size: 1.2rem !important;
+    }
+    #btnS a {font-size: 1rem;}
+
+}
+
+/*Header Media */
+@media screen and (max-width: 641px) {
+    .nav-list {display: none;}
+    .logo-img {width: 120px;}
+    .burger-menu {display: block; width: 30px;}
+}
+
+@media screen and (max-width: 220px) {
+    .nav-list {display: none;}
+    .logo-img {width: 70px;}
+    .burger-menu { display: block; width: 20px;}
+    
+}
+
+/*Pocetna Media*/
+@media screen and (max-width: 641px) {
+    .nav-list {
+        display: none;
+    }
+    .logo-img {
+        width: 120px;
+    }
+    .burger-menu {
+        display: block;
+        width: 30px;
+    }
+
+    .container {
+        margin: 20px 0px;
+    }
+    .container .image-holder {
+        width: 100%;
+    }
+    #cena {margin: 20px 0px;}
+}
+
+/*NACOARE MEDIAI*/
+@media screen and (max-width: 1700px) {
+    .naocare .container {
+        grid-template-columns: none;
+    }
+}
